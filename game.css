@@ -1,0 +1,135 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(86, 165, 235, 0.25);
+    background-color: #EAEAF1;
+  }
+  
+  .choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #564ab1;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  }
+  
+  .choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #564ab1;
+    color: white;
+  }
+  
+  .choice-text {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  
+  .correct {
+    background-color: #28a745;
+  }
+  
+  .incorrect {
+    background-color: #dc3545;
+  }
+  
+  /* HUD */
+
+
+  .hud-main-text{
+    margin-right: 1.5rem;
+  }
+  
+  #hud {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAEAF1;
+    border-radius: 10px;
+  }
+  
+  .hud-prefix {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-right: 1.5rem;
+  }
+  
+  .hud-main-text {
+    text-align: center;
+  }
+  
+  #progressBar {
+    width: 20rem;
+    height: 4rem;
+    border-radius:7px;
+    border: 0.3rem solid #fe5c82;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  
+  #progressBarFull {
+    height: 3.4rem;
+    background-color: #fe5c82;
+    width: 0%;
+  }
+
+  #loader {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  #loader:before {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+  }
+  #loader:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #564ab1;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+  }
+  @keyframes animate {
+    17% {
+      border-bottom-right-radius: 3px;
+    }
+    25% {
+      transform: translateY(9px) rotate(22.5deg);
+    }
+    50% {
+      transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+      border-bottom-right-radius: 40px;
+    }
+    75% {
+      transform: translateY(9px) rotate(67.5deg);
+    }
+    100% {
+      transform: translateY(0) rotate(90deg);
+    }
+  }
+  @keyframes shadow {
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.2, 1);
+    }
+  }
